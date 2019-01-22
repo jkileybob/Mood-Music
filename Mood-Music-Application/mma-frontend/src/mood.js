@@ -5,7 +5,6 @@ class Mood {
     this.description = description
     this.img_url = img_url
     Mood.all.push(this)
-    // this.render()
   }
 
   render(){
@@ -27,22 +26,13 @@ class Mood {
   }
 
 }
-//
-// function moodFormOnclick() {
-//   var x = document.getElementById("mood-form");
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-//
-//   function openForm() {
-//     document.getElementById("mood-form-popup").style.display = "block";
-//   }
-//
-//   function closeForm() {
-//     document.getElementById("mood-form-popup").style.display = "none";
-//   }
 
-// }
+
+function moodFormOnclick(click) {
+  var showBtn = document.getElementById("mood-form");
+  if(click==1)
+  showBtn.style.display="none";
+  else
+  showBtn.style.display="block";
+}
 Mood.all = []
