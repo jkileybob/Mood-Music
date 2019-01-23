@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Kiley Recommended</title>
-    <script src="src/mood.js" charset="utf-8"></script>
-    <!-- <script src="src/music.js" charset="utf-8"></script> -->
     <script src="src/index.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css" media="screen" />
   </head>
@@ -12,22 +10,20 @@
     <h1>Moods</h1>
     <ul id='moods'></ul>
 
-
     <button onclick="moodFormOnclick(2)">Feeling Moody?</button>
     <button onclick="moodFormOnclick(1)">Get this form out my face.</button>
-    <div class="mood-form-popup" id="mood-form">
-      <form id="mood-form-container">
-
+    <div class="mood" id="mood-form-container">
+      <form id="mood-form">
         <label for="mood-name"><b>Mood Name:</b></label>
         <input id="mood-name-input" type="text" placeholder="Name Plz."></input><br>
 
         <label for="mood-description"><b>Describe Your Mood:</b></label>
-        <textarea name="mood-description-input" placeholder="Tell me how you're feeling." rows="3" cols="40"></textarea><br>
+        <textarea id="mood-description-input" placeholder="Tell me how you're feeling." rows="3" cols="40"></textarea><br>
 
         <label for="mood-img"><b>Post a URL That Sums Up Your Mood:</b></label>
         <input id="mood-img-input" type="text" placeholder="Gimme some pics."></input><br>
 
-        <input id="mood-form-submit" type="button" value="Validate My Emotions.">
+        <button id="mood-form-submit" type="submit">Validate My Emotions.</button>
       </form>
     </div>
 
