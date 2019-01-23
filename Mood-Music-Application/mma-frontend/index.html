@@ -7,13 +7,12 @@
     <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css" media="screen" />
   </head>
   <body>
-    <h1>Moods</h1>
-    <ul id='moods'></ul>
 
     <button onclick="moodFormOnclick(2)">Feeling Moody?</button>
     <button onclick="moodFormOnclick(1)">Get this form out my face.</button>
-    <div class="mood" id="mood-form-container">
+    <div class="container" id="mood-form-container">
       <form id="mood-form">
+
         <label for="mood-name"><b>Mood Name:</b></label>
         <input id="mood-name-input" type="text" placeholder="Name Plz."></input><br>
 
@@ -27,5 +26,7 @@
       </form>
     </div>
 
+    <h1>Moods</h1>
+    <div id='moods'></div>
   </body>
 </html>

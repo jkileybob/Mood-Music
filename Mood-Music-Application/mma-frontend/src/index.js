@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', ()=>{
   // console.log
   getAllMoods();
+  getMusic();
   submitEventListener();
 });
 
-// FETCH REQUESTS:
+/////////////////////FETCH REQUESTS:
+// mood fetches:
 function getAllMoods(){
   fetch(`http://localhost:3000/moods`)
   .then(response => response.json())
@@ -48,33 +50,59 @@ function deleteMood(id){
   })
 }
 
+// music fetches:
+function getMusic(){
+  fetch(`http://localhost:3000/musics`)
+  .then(response => response.json())
+  .then((allMusic) => {
+    allMusic.forEach(musicObj=>{
+      debugger
+      filterMusic(musicObj.moods);
+    })
+  })
+}
+
+function filterMusic(moodArr){
+// let x = moodArr.filter(moodArr => {moodArr.length >= 1})
+debugger
+// console.log(x)
+}
 
 
+// ///////////////////////////////////////////mood:
 function renderMood(moodObj){
-  let ulMood = document.getElementById('moods')
+  let div = document.getElementById('moods')
   let divMood = document.createElement('div')
     divMood.id = `mood-${moodObj.id}`
+    divMood.classList.add('card')
   let h2Mood = document.createElement('h2')
     h2Mood.innerText = moodObj.name
   let imgMood = document.createElement('img')
     imgMood.src = moodObj.img_url
+    imgMood.id = `mood-img-${moodObj.id}`
+    imgMood.addEventListener('click', imgMoodOnClick)
+
   let pMood = document.createElement('p')
     pMood.innerText = moodObj.description
   let deleteBtn = document.createElement('button')
       deleteBtn.id = `delete-mood-${moodObj.id}`
+      deleteBtn.innerText = "THIS IS A TRASH MOOD";
       deleteBtn.addEventListener('click', onClickDelete)
+
+  div.appendChild(divMood)
 
   divMood.appendChild(h2Mood)
   divMood.appendChild(imgMood)
   divMood.appendChild(pMood)
   divMood.appendChild(deleteBtn)
 
-  ulMood.appendChild(divMood)
+}
+//////////////////////////////////////////////////////music:
+function showMusic(){
+
 }
 
-
-
-// HANDLER:
+/////////////////////////////// HANDLERS:
 function newMoodHandler(e){
   e.preventDefault();
   let newMoodObj = {
@@ -91,7 +119,15 @@ function onClickDelete(e){
   deleteMood(id);
 }
 
-// DOM Stuff:
+function imgMoodOnClick(e){
+  console.log("this click is connected");
+  // debugger
+  // let id = parseInt(e.target.id.split('-')[2])
+  getMusic();
+}
+
+
+///////////////////////////// DOM Stuff:
 function getMoodForm(){
   return document.getElementById("mood-form");
 }
