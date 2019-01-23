@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   getAllMoods();
 });
 
+// MOOD:
 function getAllMoods(){
   fetch(`http://localhost:3000/moods`)
   .then(response => response.json())
@@ -52,5 +53,17 @@ function deleteMood(id){
   }).then(response => response.json())
   .then((mood)=>{
      document.querySelector(`#mood-${id}`).remove()
+  })
+}
+
+// MUSIC:
+function getAllMusics(){
+  fetch(`http://localhost:3000/musics`)
+  .then(response => response.json())
+  .then(musics => {
+    musics.forEach((music) => {
+      let musicInstance = new Music(music.id, music.title, music.artist, music.img_url)
+      musicInstance.render();
+    })
   })
 }
