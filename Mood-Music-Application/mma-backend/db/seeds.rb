@@ -29,21 +29,25 @@ Music.create(title: "Lovely Day", artist: "Bill Withers", artist_img: "https://w
 
 
 # Mood.create(name: "", description: "", img_url: "")
-Mood.create(name: "Got It GOOD", description: "When you're in love and wanna feel it.", img_url: "https://media0.giphy.com/media/dJtnMymT9imSH9D142/giphy.gif?cid=3640f6095c464687616b52454154fcd7")
+Mood.create(name: "In L-O-V-E", description: "When you're in love and wanna feel it.", img_url: "https://media0.giphy.com/media/dJtnMymT9imSH9D142/giphy.gif?cid=3640f6095c464687616b52454154fcd7")
 Mood.create(name: "Sleepsters", description: "When you need slow it way, way down and get some rest.", img_url: "https://media0.giphy.com/media/HwmDZaI4YEeZ2/giphy.gif?cid=3640f6095c464bc97634756c778cd3eb")
 Mood.create(name: "Feelin' it", description: "When you need that groove.", img_url: "https://media2.giphy.com/media/TgKEjjz1lzjmEsuz80/giphy.gif?cid=3640f6095c464c8d7151364f413f9337")
 Mood.create(name: "HAPPY!!", description: "When you need a groove that reflects your joy.", img_url: "https://media.giphy.com/media/4JCiJFD0XfYQ/giphy.gif")
 Mood.create(name: "Sophisticated.", description: "When you gotta wear glasses to find the groove.", img_url: "http://www.reactiongifs.com/wp-content/uploads/2013/08/oh-how-interesting.gif")
+Mood.create(name: "Please. PLEASE!", description: "This better fucking work.", img_url: "https://media.giphy.com/media/GQT9tuAchaBG0/giphy.gif")
+
 
 # MOOD MUSIC:
-MoodMusic.create(mood_id: 4, music_id: 1)
-# MoodMusic.create(mood_id: 1, music_id: 2)
-# MoodMusic.create(mood_id: 1, music_id: 3)
-# MoodMusic.create(mood_id: 1, music_id: 4)
-# MoodMusic.create(mood_id: 1, music_id: 5)
-# MoodMusic.create(mood_id: 1, music_id: 6)
-# MoodMusic.create(mood_id: 1, music_id: 7)
-# MoodMusic.create(mood_id: 1, music_id: 8)
+MoodMusic.create(mood_id: 3, music_id: 1)
+MoodMusic.create(mood_id: 1, music_id: 2)
+MoodMusic.create(mood_id: 2, music_id: 11)
+MoodMusic.create(mood_id: 4, music_id: 4)
+MoodMusic.create(mood_id: 5, music_id: 8)
+
+MoodMusic.create(mood_id: 6, music_id: 6)
+MoodMusic.create(mood_id: 6, music_id: 7)
+MoodMusic.create(mood_id: 6, music_id: 8)
+
 # MoodMusic.create(mood_id: 1, music_id: 9)
 # MoodMusic.create(mood_id: 1, music_id: 10)
 # MoodMusic.create(mood_id: 1, music_id: 11)
