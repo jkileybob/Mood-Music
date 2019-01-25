@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :moods, :musics
+  resources :moods, :musics, :mood_musics
 end
